@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Wordsearch</title>
+    <script>
+        window.onload = function() {
+            for (let node of document.querySelectorAll ("td")) {
+                // select and hightlight
+                node.onclick = function() {
+                    if (node.className == ""){
+                        node.className = "selected";
+                    } else {
+                        node.className = "";
+                    }
+                    checkSelection();
+                }
+                if (node.textContent != "") continue; 
+                let charcode = Math.round(65 + Math.random() * 25)
+                node.textContent = String.fromCharCode(charcode);
+
+            function checkSelection() {
+                let selectedAngoro = document.querySelectorAll(".angoro.selected").length;
+                if (selectedAngoro === 6) {
+                    document.getElementById("checkbox3").checked = true;
+                } else {
+                    document.getElementById("checkbox3").checked = false;
+                }
+            }
+            }
+}
+    </script>
+    <style>
+        table{
+            border-collapse:collapse;
+        }
+
+        td{
+            cursor : pointer; 
+            border:1px solid black;
+            width:30px;
+            height:30px;
+            text-align:center;
+        }
+
+        td.selected {
+            background:yellow;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr  id="row1">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr  id="row2">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row3">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="angoro">A</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+        </tr>
+
+        <tr id="row4">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="angoro">N</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>A</td>
+            <td></td>
+        </tr>
+
+        <tr id="row5">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>F</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="angoro">G</td>
+            <td></td>
+            <td>T</td>
+            <td>I</td>
+            <td>M</td>
+            <td>O</td>
+        </tr>
+
+        <tr id="row6">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>I</td>
+            <td></td>
+            <td>E</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>K</td>
+            <td class="angoro">O</td>
+            <td>L</td>
+            <td>E</td>
+            <td>R</td>
+            <td>O</td>
+            <td></td>
+        </tr>
+
+        <tr id="row7">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>N</td>
+            <td></td>
+            <td>L</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="angoro">R</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row8">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>T</td>
+            <td>R</td>
+            <td>I</td>
+            <td>S</td>
+            <td>T</td>
+            <td>E</td>
+            <td>C</td>
+            <td class="angoro">O</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row9">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>E</td>
+            <td></td>
+            <td>Ĉ</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row10">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>R</td>
+            <td></td>
+            <td>D</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row11">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>E</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row12">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>S</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row13">
+            <td>M</td>
+            <td>I</td>
+            <td>R</td>
+            <td>O</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row14">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row15">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+
+    <h3>Hint</h3>
+    <input type="checkbox" id="checkbox1">Think about what makes you smile and brings you joy.<br>
+    <input type="checkbox" id="checkbox2">When you feel low, this emotion might be present.<br>
+    <input type="checkbox" id="checkbox3">Often associated with fear or extreme distress.<br>
+    <input type="checkbox" id="checkbox4">What you might feel when someone greatly upsets you.<br>
+    <input type="checkbox" id="checkbox5">A feeling of wonder or astonishment.<br>
+    <input type="checkbox" id="checkbox6">You feel this when something captivates your attention or curiosity.<br>
+    <input type="checkbox" id="checkbox7">It's that uneasy feeling when you're afraid of something.<br>
+    <input type="checkbox" id="checkbox8">The strongest of emotions, it often brings people together in profound ways.<br>
+</body>
+</html>

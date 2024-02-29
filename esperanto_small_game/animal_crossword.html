@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal crossword</title>
+    <script>
+         window.onload = function() {
+            document.getElementById('submitBtn').onclick = function() {
+                let U = document.getElementById('U').value.toUpperCase();
+                if (U === "U") {
+                    document.getElementById('U').className = "true";
+                } else {
+                    document.getElementById('U').className = "false";
+                }
+
+                let S = document.getElementById('S').value.toUpperCase();
+                if (S === "S") {
+                    document.getElementById('S').className = "true";
+                } else {
+                    document.getElementById('S').className = "false";
+                }
+
+                let I = document.getElementById('I').value.toUpperCase();
+                if (I === "I") {
+                    document.getElementById('I').className = "true";
+                } else {
+                    document.getElementById('I').className = "false";
+                }
+
+                let D = document.getElementById('D').value.toUpperCase();
+                if (D === "D") {
+                    document.getElementById('D').className = "true";
+                } else {
+                    document.getElementById('D').className = "false";
+                }
+
+                let K = document.getElementById('K').value.toUpperCase();
+                if (K === "K") {
+                    document.getElementById('K').className = "true";
+                } else {
+                    document.getElementById('K').className = "false";
+                }
+
+                let E = document.getElementById('E').value.toUpperCase();
+                if (E === "E") {
+                    document.getElementById('E').className = "true";
+                } else {
+                    document.getElementById('E').className = "false";
+                }
+
+                let O = document.getElementById('O').value.toUpperCase();
+                if (O === "O") {
+                    document.getElementById('O').className = "true";
+                } else {
+                    document.getElementById('O').className = "false";
+                }
+
+                let H = document.getElementById('H').value.toUpperCase();
+                if (H === "H") {
+                    document.getElementById('H').className = "true";
+                } else {
+                    document.getElementById('H').className = "false";
+                }
+
+                let I2 = document.getElementById('I2').value.toUpperCase();
+                if (I2 === "I") {
+                    document.getElementById('I2').className = "true";
+                } else {
+                    document.getElementById('I2').className = "false";
+                }
+
+                let E2 = document.getElementById('E2').value.toUpperCase();
+                if (E2 === "E") {
+                    document.getElementById('E2').className = "true";
+                } else {
+                    document.getElementById('E2').className = "false";
+                }
+
+                let O2 = document.getElementById('O2').value.toUpperCase();
+                if (O2 === "O") {
+                    document.getElementById('O2').className = "true";
+                } else {
+                    document.getElementById('O2').className = "false";
+                }
+
+                let S2 = document.getElementById('S2').value.toUpperCase();
+                if (S2 === "S") {
+                    document.getElementById('S2').className = "true";
+                } else {
+                    document.getElementById('S2').className = "false";
+                }
+            }
+         }
+    </script>
+    <style>
+        table{
+            border-collapse:collapse;
+        }
+
+        td{
+            width:30px;
+            height:30px;
+            text-align:center;
+        }
+
+        .withB{
+            border:1px solid black;
+        }
+
+        input{
+            width:30px;
+            height:30px;
+            text-align:center;
+            border: 0px; 
+            color:black;
+        }
+
+        input.true{
+            color:green;
+        }
+
+        input.false{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr class="row" id="row1">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="withB"><input type="text" id="I2"></td>
+            <td></td>
+            <td></td>
+            <td class="withB" ><input type="text" id="H2"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr class="row" id="row2">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="withB">N</td>
+            <td></td>
+            <td class="withB">B</td>
+            <td class="withB">U</td>
+            <td class="withB">R</td>
+            <td class="withB"><input type="text" id="S2"></td>
+            <td class="withB"><input type="text"  id="O2"></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr class="row" id="row3">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="withB">S</td>
+            <td></td>
+            <td class="withB"><input type="text" id="E2"></td>
+            <td class="withB">N</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr class="row" id="row4">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="withB" ><input type="text" id="E"></td>
+            <td></td>
+            <td class="withB">S</td>
+            <td class="withB">D</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr class="row" id="row5">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="withB" ><input type="text" id="K"></td>
+            <td class="withB">A</td>
+            <td class="withB">T</td>
+            <td class="withB" ><input type="text" id="O"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr class="row" id="row6">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="withB">F</td>
+            <td></td>
+            <td></td>
+            <td class="withB">T</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr class="row" id="row7">
+            <td></td>
+            <td></td>
+            <td class="withB">B</td>
+            <td class="withB" ><input type="text" id="I"></td>
+            <td class="withB">R</td>
+            <td class="withB" ><input type="text" id="D"></td>
+            <td class="withB">O</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr class="row" id="row8">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="withB">Ŝ</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr class="row" id="row9">
+            <td class="withB">M</td>
+            <td class="withB" ><input type="text" id="U"></td>
+            <td class="withB" ><input type="text" id="S"></td>
+            <td class="withB">O</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr class="row" id="row10">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="withB">J</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        
+    </table>
+
+    <h3>Hint</h3>
+        <ul>
+            <li>This word refers to a living organism that is not a plant.</li>
+            <li>This is a common domesticated animal often kept as a pet.</li>
+            <li>Another common domesticated animal, often associated with independence.</li>
+            <li>A feathered vertebrate animal with wings.</li>
+            <li>An aquatic animal with gills and fins.</li>
+            <li>A large, powerful mammal with a thick fur coat.</li>
+            <li>A small invertebrate animal with six legs and typically wings.</li>
+            <li>A small rodent with a pointed snout and long tail.</li>
+
+        </ul>
+
+        <button type="submit" id="submitBtn">Submit</button>
+</body>
+</html>
