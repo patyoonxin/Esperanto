@@ -1,0 +1,23 @@
+body {
+    background-image: url('bg_with_tree.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0; 
+}
+
+.container{
+    z-index: 1;
+} 
+
+.foot{
+    width:18px;
+    height:auto;
+    position: absolute; 
+}
+
+
+
+
+
