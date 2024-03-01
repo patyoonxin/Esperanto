@@ -4,96 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Family crossword </title>
-    <script>
-         window.onload = function() {
-            document.getElementById('submitBtn').onclick = function() {
-                let U = document.getElementById('U').value.toUpperCase();
-                if (U === "U") {
-                    document.getElementById('U').className = "true";
-                } else {
-                    document.getElementById('U').className = "false";
-                }
-
-                let F = document.getElementById('F').value.toUpperCase();
-                if (F === "F") {
-                    document.getElementById('F').className = "true";
-                } else {
-                    document.getElementById('F').className = "false";
-                }
-
-                let A = document.getElementById('A').value.toUpperCase();
-                if (A === "A") {
-                    document.getElementById('A').className = "true";
-                } else {
-                    document.getElementById('A').className = "false";
-                }
-
-                let T = document.getElementById('T').value.toUpperCase();
-                if (T === "T") {
-                    document.getElementById('T').className = "true";
-                } else {
-                    document.getElementById('T').className = "false";
-                }
-
-                let I = document.getElementById('I').value.toUpperCase();
-                if (I === "K") {
-                    document.getElementById('I').className = "true";
-                } else {
-                    document.getElementById('I').className = "false";
-                }
-
-                let E = document.getElementById('E').value.toUpperCase();
-                if (E === "E") {
-                    document.getElementById('E').className = "true";
-                } else {
-                    document.getElementById('E').className = "false";
-                }
-
-                let L = document.getElementById('L').value.toUpperCase();
-                if (L === "L") {
-                    document.getElementById('L').className = "true";
-                } else {
-                    document.getElementById('L').className = "false";
-                }
-
-                let N = document.getElementById('N').value.toUpperCase();
-                if (N === "N") {
-                    document.getElementById('N').className = "true";
-                } else {
-                    document.getElementById('N').className = "false";
-                }
-
-                let R = document.getElementById('R').value.toUpperCase();
-                if (R === "R") {
-                    document.getElementById('R').className = "true";
-                } else {
-                    document.getElementById('R').className = "false";
-                }
-
-                let T2 = document.getElementById('T2').value.toUpperCase();
-                if (T2 === "T") {
-                    document.getElementById('T2').className = "true";
-                } else {
-                    document.getElementById('T2').className = "false";
-                }
-
-                let R2 = document.getElementById('R2').value.toUpperCase();
-                if (R2 === "R") {
-                    document.getElementById('R2').className = "true";
-                } else {
-                    document.getElementById('R2').className = "false";
-                }
-
-                let N2 = document.getElementById('N2').value.toUpperCase();
-                if (N2 === "N") {
-                    document.getElementById('N2').className = "true";
-                } else {
-                    document.getElementById('N2').className = "false";
-                }
-                
-            }
-         }
-    </script>
     <style>
         table{
             border-collapse:collapse;
@@ -114,14 +24,15 @@
             height:30px;
             text-align:center;
             border: 0px; 
+            color: black;
         }
 
-        input.true{
-            color:green;
+        .true{
+            color: green !important;
         }
 
-        input.false{
-            color:red;
+        .false{
+            color: red !important;
         }
     </style>
 </head>
@@ -295,6 +206,95 @@
 
         </ul>
 
-        <button type="submit" id="submitBtn">Submit</button>
+        <button type="submit" id="submitBtn" onclick="myFunction()">Submit</button>
+        <script>
+            function myFunction() {
+            // let U = document.getElementById('U').value.toUpperCase();
+            // if (U === "U") {
+            //     document.getElementById('U').className = "true";
+            // } else {
+            //     document.getElementById('U').className = "false";
+            // }
+
+                let F = document.getElementById('F').value.toUpperCase();
+                if (F === "F") {
+                    document.getElementById('F').className = "true";
+                } else {
+                    document.getElementById('F').className = "false";
+                }
+    
+                let A = document.getElementById('A').value.toUpperCase();
+                if (A === "A") {
+                    document.getElementById('A').className = "true";
+                } else {
+                    document.getElementById('A').className = "false";
+                }
+    
+                let T = document.getElementById('T').value.toUpperCase();
+                if (T === "T") {
+                    document.getElementById('T').className = "true";
+                } else {
+                    document.getElementById('T').className = "false";
+                }
+    
+                let I = document.getElementById('I').value.toUpperCase();
+                if (I === "K") {
+                    document.getElementById('I').className = "true";
+                } else {
+                    document.getElementById('I').className = "false";
+                }
+    
+                let E = document.getElementById('E').value.toUpperCase();
+                if (E === "E") {
+                    document.getElementById('E').className = "true";
+                } else {
+                    document.getElementById('E').className = "false";
+                }
+    
+                let L = document.getElementById('L').value.toUpperCase();
+                if (L === "L") {
+                    document.getElementById('L').className = "true";
+                } else {
+                    document.getElementById('L').className = "false";
+                }
+    
+                let N = document.getElementById('N').value.toUpperCase();
+                if (N === "N") {
+                    document.getElementById('N').className = "true";
+                } else {
+                    document.getElementById('N').className = "false";
+                }
+    
+                let R = document.getElementById('R').value.toUpperCase();
+                if (R === "R") {
+                    document.getElementById('R').className = "true";
+                } else {
+                    document.getElementById('R').className = "false";
+                }
+    
+                let T2 = document.getElementById('T2').value.toUpperCase();
+                if (T2 === "T") {
+                    document.getElementById('T2').className = "true";
+                } else {
+                    document.getElementById('T2').className = "false";
+                }
+    
+                let R2 = document.getElementById('R2').value.toUpperCase();
+                if (R2 === "R") {
+                    document.getElementById('R2').className = "true";
+                } else {
+                    document.getElementById('R2').className = "false";
+                }
+    
+                let N2 = document.getElementById('N2').value.toUpperCase();
+                if (N2 === "N") {
+                    document.getElementById('N2').className = "true";
+                } else {
+                    document.getElementById('N2').className = "false";
+                }
+            };
+            
+                
+        </script>
 </body>
 </html>
