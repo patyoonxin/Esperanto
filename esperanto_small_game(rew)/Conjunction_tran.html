@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conjunction translate </title>
+    <script>
+        function showImg() {
+            // Define correct answers
+            const correctAnswers = {
+                Q1: "ForQ1",
+                Q2: "AndQ2",
+                Q3: "OrQ3",
+                Q4: "ButQ4",
+                Q5: "BecauseQ5",
+                Q6: "SoQ6",
+                Q7: "IfQ7",
+                Q8: "AlthoughQ8"
+            };
+
+            // Loop through each question
+            for (const question in correctAnswers) {
+                // Get the selected answer for the question
+                const selectedAnswer = document.querySelector(`input[name="${question}"]:checked`);
+
+                // Check if the selected answer is correct
+                if (selectedAnswer && selectedAnswer.value === correctAnswers[question]) {
+                    // Get the corresponding image element
+                    const img = document.createElement('img');
+                    img.setAttribute('src', 'correct.png');
+                    img.setAttribute('alt', 'Correct');
+
+                    // Insert the image after the radio button's label
+                    selectedAnswer.nextSibling.nextSibling.after(img);
+                }
+            }
+        }
+    </script>
+    <style>   
+        img{
+            width: 15px;
+            height: auto;
+            margin-left: 0px;
+        }
+
+        body{
+            background-image: url("bg_with_tree.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #8fa540;
+        }
+
+        @media (max-width: 1500px) {
+            div {
+                margin: 100px 150px;
+                background-color: beige;
+                font-size:20px;
+                position:center;
+                padding: 10px;
+            }
+            li{
+                margin-top: 17px;
+            }
+            #submitBtn{
+                height: 25px;
+                width: 80px;
+                background-color:white;
+                font-size: black;
+                font-size: 16px;
+                margin:5px 20px;
+            }
+        }
+
+        @media (min-width: 1500px) {
+            div {
+                margin: 50px 450px ;
+
+                background-color: beige;
+                font-size:22px;
+                position:center;
+                padding: 10px 100px;
+            }
+            li{
+                margin-top: 25px;
+            }
+            #submitBtn{
+                height: 27px;
+                width: 82px;
+                background-color:white;
+                font-size: black;
+                font-size: 18px;
+                margin:5px 20px;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div >
+<ol>
+    <li>Por</li>
+    <input type="radio" id="ForQ1" name="Q1" value="ForQ1">
+    <label for="ForQ1">For</label><br>
+    <input type="radio" id="AndQ1" name="Q1" value="AndQ1">
+    <label for="AndQ1">And</label><br>
+    <input type="radio" id="OrQ1" name="Q1" value="OrQ1">
+    <label for="OrQ1">Or</label><br>
+    <input type="radio" id="ButQ1" name="Q1" value="ButQ1">
+    <label for="ButQ1">But</label><br>
+    
+    <li>Kaj</li>
+    <input type="radio" id="ForQ2" name="Q2" value="ForQ2">
+    <label for="ForQ2">For</label><br>
+    <input type="radio" id="AndQ2" name="Q2" value="AndQ2">
+    <label for="AndQ2">And</label><br>
+    <input type="radio" id="BecauseQ2" name="Q2" value="BecauseQ2">
+    <label for="BecauseQ2">Because</label><br>
+    <input type="radio" id="OrQ2" name="Q2" value="OrQ2">
+    <label for="OrQ2">Or</label><br>
+    <li>Aŭ</li>
+    <input type="radio" id="OrQ3" name="Q3" value="OrQ3">
+    <label for="OrQ3">Or</label><br>
+    <input type="radio" id="AndQ3" name="Q3" value="AndQ3">
+    <label for="AndQ3">And</label><br>
+    <input type="radio" id="BecauseQ3" name="Q3" value="BecauseQ3">
+    <label for="BecauseQ3">Because</label><br>
+    <input type="radio" id="ButQ3" name="Q3" value="ButQ3">
+    <label for="ButQ3">But</label><br>
+    <li>Sed</li>
+    <input type="radio" id="OrQ4" name="Q4" value="OrQ4">
+    <label for="OrQ4">Or</label><br>
+    <input type="radio" id="SoQ4" name="Q4" value="SoQ4">
+    <label for="SoQ4">So</label><br>
+    <input type="radio" id="BecauseQ4" name="Q4" value="BecauseQ4">
+    <label for="BecauseQ4">Because</label><br>
+    <input type="radio" id="ButQ4" name="Q4" value="ButQ4">
+    <label for="ButQ4">But</label><br>
+    <li>Ĉar</li>
+    <input type="radio" id="AlthoughQ5" name="Q5" value="AlthoughQ5">
+    <label for="AlthoughQ5">Although</label><br>
+    <input type="radio" id="SoQ5" name="Q5" value="SoQ5">
+    <label for="SoQ5">So</label><br>
+    <input type="radio" id="ForQ5" name="Q5" value="ForQ5">
+    <label for="ForQ5">For</label><br>
+    <input type="radio" id="BecauseQ5" name="Q5" value="BecauseQ5">
+    <label for="BecauseQ5">Because</label><br>
+    <li>Do</li>
+    <input type="radio" id="OrQ6" name="Q6" value="OrQ6">
+    <label for="OrQ6">Or</label><br>
+    <input type="radio" id="AndQ6" name="Q6" value="AndQ6">
+    <label for="AndQ6">And</label><br>
+    <input type="radio" id="SoQ6" name="Q6" value="SoQ6">
+    <label for="SoQ6">So</label><br>
+    <input type="radio" id="ForQ6" name="Q6" value="ForQ6">
+    <label for="ForQ6">For</label><br>
+    <li>Se</li>
+    <input type="radio" id="OrQ7" name="Q7" value="OrQ7">
+    <label for="OrQ7">Or</label><br>
+    <input type="radio" id="AndQ7" name="Q7" value="AndQ7">
+    <label for="AndQ7">And</label><br>
+    <input type="radio" id="IfQ7" name="Q7" value="IfQ7">
+    <label for="IfQ7">If</label><br>
+    <input type="radio" id="BecauseQ7" name="Q7" value="BecauseQ7">
+    <label for="BecauseQ7">Because</label><br>
+    <li>Kvankam</li>
+    <input type="radio" id="OrQ8" name="Q8" value="OrQ8">
+    <label for="OrQ8">Or</label><br>
+    <input type="radio" id="AndQ8" name="Q8" value="AndQ8">
+    <label for="AndQ8">And</label><br>
+    <input type="radio" id="AlthoughQ8" name="Q8" value="AlthoughQ8">
+    <label for="AlthoughQ8">Although</label><br>
+    <input type="radio" id="SoQ8" name="Q8" value="SoQ8">
+    <label for="SoQ8">So</label><br>
+</ol>
+
+<button type="submit" id="submitBtn" onclick="showImg()">Submit</button>
+</div>
+</body>
+</html>

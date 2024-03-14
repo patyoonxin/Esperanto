@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color</title>
+    <script>
+        window.onload = function() {
+            document.getElementById('submitBtn').onclick = function() {
+                let inputBlue = document.getElementById('inputBlue').value.toLowerCase();
+                if (inputBlue === "bluo") {
+                    document.getElementById('inputBlue').className = "true";
+                } else {
+                    document.getElementById('inputBlue').className = "false";
+                }
+
+                let inputRed = document.getElementById('inputRed').value.toLowerCase();
+                if (inputRed === "ruĝo") {
+                    document.getElementById('inputRed').className = "true";
+                } else {
+                    document.getElementById('inputRed').className = "false";
+                }
+
+                let inputYellow = document.getElementById('inputYellow').value.toLowerCase();
+                if (inputYellow === "flavo") {
+                    document.getElementById('inputYellow').className = "true";
+                } else {
+                    document.getElementById('inputYellow').className = "false";
+                }
+
+                let inputGreen = document.getElementById('inputGreen').value.toLowerCase();
+                if (inputGreen === "verdo") {
+                    document.getElementById('inputGreen').className = "true";
+                } else {
+                    document.getElementById('inputGreen').className = "false";
+                }
+
+                let inputBrown = document.getElementById('inputBrown').value.toLowerCase();
+                if (inputBrown === "bruna") {
+                    document.getElementById('inputBrown').className = "true";
+                } else {
+                    document.getElementById('inputBrown').className = "false";
+                }
+
+                let inputBlack = document.getElementById('inputBlack').value.toLowerCase();
+                if (inputBlack === "nigra") {
+                    document.getElementById('inputBlack').className = "true";
+                } else {
+                    document.getElementById('inputBlack').className = "false";
+                }
+
+                let inputGrey = document.getElementById('inputGrey').value.toLowerCase();
+                if (inputGrey === "griza") {
+                    document.getElementById('inputGrey').className = "true";
+                } else {
+                    document.getElementById('inputGrey').className = "false";
+                }
+
+                let inputPurple = document.getElementById('inputPurple').value.toLowerCase();
+                if (inputPurple === "purpuro") {
+                    document.getElementById('inputPurple').className = "true";
+                } else {
+                    document.getElementById('inputPurple').className = "false";
+                }
+            }
+        }    
+    </script>
+    <style>
+        table {
+            border-collapse: separate;
+            border-spacing: 30px 10px;
+        }
+
+        .colorDiv{
+            height:80px;
+        }
+
+        #blueIm{
+            background-color:blue;
+        }
+
+        #redIm{
+            background-color:red;
+        }
+
+        #yellowIm{
+            background-color:yellow;
+        }
+
+        #greenIm{
+            background-color:green;
+        }
+
+        #brownIm{
+            background-color:brown;
+        }
+
+        #blackIm{
+            background-color:black;
+        }
+
+        #greyIm{
+            background-color:grey;
+        }
+        #purpleIm{
+            background-color:purple;
+        }
+
+        input.true{
+            color:green;
+        }
+
+        input.false{
+            color:red;
+        }
+
+        body{
+            background-image: url("bg_with_tree.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #8fa540;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            margin: 0;
+        }
+
+        @media (max-width: 1500px) {
+            div {
+                min-width:860px;
+                background-color: beige;
+                justify-content: center; 
+                align-items: center; 
+                padding: 20px 10px;
+                margin:0 auto;
+                text-align: center; 
+            }
+            input{
+                font-size:20px;
+                width:166px;
+            }
+            #submitBtn{
+                height: 25px;
+                width: 100px;
+                background-color:white;
+                font-size: black;
+                font-size: 16px;
+                margin:15px auto;
+                position: center; 
+            }
+        }
+
+        @media (min-width: 1500px) {
+            div {
+                min-width:860px;
+                background-color: beige;
+                justify-content: center; 
+                align-items: center; 
+                padding: 20px 10px;
+                text-align: center; 
+
+            }
+            input{
+                font-size:20px;
+                width:166px;
+            }
+            #submitBtn{
+                height: 27px;
+                width: 100px;
+                background-color:white;
+                font-size: black;
+                font-size: 18px;
+                margin:15px auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div>
+<table>
+    <tr>
+        <td class="colorDiv" id="blueIm"></td>
+        <td class="colorDiv" id="redIm"></td>
+        <td class="colorDiv" id="yellowIm"></td>
+        <td class="colorDiv" id="greenIm"></td>
+    </tr>
+    <tr>
+        <td class="inputDiv" id="blueINbox"><input type="text" id="inputBlue" required></td>
+        <td class="inputDiv" id="redINbox"><input type="text" id="inputRed" required></td>
+        <td class="inputDiv" id="yellowINbox"><input type="text" id="inputYellow" required></td>
+        <td class="inputDiv" id="greenINbox"><input type="text" id="inputGreen" required></td>
+    </tr>
+    <tr></tr>
+    <tr></tr>
+    <tr>
+        <td class="colorDiv" id="brownIm"></td>
+        <td class="colorDiv" id="blackIm"></td>
+        <td class="colorDiv" id="greyIm"></td>
+        <td class="colorDiv" id="purpleIm"></td> 
+    </tr>
+    <tr>
+        <td class="inputDiv" id="brownINbox"><input type="text" id="inputBrown" required></td>
+        <td class="inputDiv" id="blackINbox"><input type="text" id="inputBlack" required></td>
+        <td class="inputDiv" id="greyINbox"><input type="text" id="inputGrey" required></td>
+        <td class="inputDiv" id="purpleINbox"><input type="text" id="inputPurple" required></td>
+    </tr>
+</table>
+<button type="submit" id="submitBtn">Submit</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pronoun translate </title>
+    <script>
+        
+        function showImg() {
+            // Define correct answers
+            const correctAnswers = {
+                Q1: "IQ1",
+                Q2: "YouQ2",
+                Q3: "HeQ3",
+                Q4: "SheQ4",
+                Q5: "ItQ5",
+                Q6: "OneselfQ6",
+                Q7: "EveryoneQ7",
+                Q8: "OneQ8"
+            };
+
+            // Loop through each question
+            for (const question in correctAnswers) {
+                // Get the selected answer for the question
+                const selectedAnswer = document.querySelector(`input[name="${question}"]:checked`);
+
+                // Check if the selected answer is correct
+                if (selectedAnswer && selectedAnswer.value === correctAnswers[question]) {
+                    // Get the corresponding image element
+                    const img = document.createElement('img');
+                    img.setAttribute('src', 'correct.png');
+                    img.setAttribute('alt', 'Correct');
+
+                    // Insert the image after the radio button's label
+                    selectedAnswer.nextSibling.nextSibling.after(img);
+                }
+            }
+        }
+
+    </script>
+    <style>
+        img{
+            width: 15px;
+            height: auto;
+            margin-left: 0px;
+        }
+
+        body{
+            background-image: url("bg_with_tree.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #8fa540;
+        }
+
+        @media (max-width: 1500px) {
+            div {
+                margin: 100px 150px;
+                background-color: beige;
+                font-size:20px;
+                position:center;
+                padding: 10px;
+            }
+            li{
+                margin-top: 17px;
+            }
+            #submitBtn{
+                height: 25px;
+                width: 80px;
+                background-color:white;
+                font-size: black;
+                font-size: 16px;
+                margin:5px 20px;
+            }
+        }
+
+        @media (min-width: 1500px) {
+            div {
+                margin: 50px 450px ;
+
+                background-color: beige;
+                font-size:22px;
+                position:center;
+                padding: 10px 100px;
+            }
+            li{
+                margin-top: 25px;
+            }
+            #submitBtn{
+                height: 27px;
+                width: 82px;
+                background-color:white;
+                font-size: black;
+                font-size: 18px;
+                margin:5px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+<ol>
+    
+    <li>Mi</li>
+        <input type="radio" id="YouQ1" name="Q1" value="YouQ1">
+        <label for="YouQ1">You</label><br>
+
+        <input type="radio" id="IQ1" name="Q1" value="IQ1">
+        <label for="IQ1">I<img id="imgQ1"></label><br>
+        
+        <input type="radio" id="HeQ1" name="Q1" value="HeQ1">
+        <label for="HeQ1">He</label><br>
+
+        <input type="radio" id="SheQ1" name="Q1" value="SheQ1">
+        <label for="SheQ1">She</label><br>
+
+    <li>Vi</li>
+        <input type="radio" id="YouQ2" name="Q2" value="YouQ2">
+        <label for="YouQ2">You<img id="imgQ2"></label><br>
+
+        <input type="radio" id="IQ2" name="Q2" value="IQ2">
+        <label for="IQ2">I</label><br>
+
+        <input type="radio" id="HeQ2" name="Q2" value="HeQ2">
+        <label for="HeQ2">He</label><br>
+
+        <input type="radio" id="ItQ2" name="Q2" value="ItQ2">
+        <label for="ItQ2">It</label><br>
+
+    <li>Li</li>
+        <input type="radio" id="SheQ3" name="Q3" value="SheQ3">
+        <label for="SheQ3">She</label><br>
+
+        <input type="radio" id="IQ3" name="Q3" value="IQ3">
+        <label for="IQ3">I</label><br>
+
+        <input type="radio" id="HeQ3" name="Q3" value="HeQ3">
+        <label for="HeQ3">He<img id="imgQ3"></label><br>
+
+        <input type="radio" id="ItQ3" name="Q3" value="ItQ3">
+        <label for="ItQ3">It</label><br>
+
+    <li>Ŝi</li>
+        <input type="radio" id="IQ4" name="Q4" value="IQ4">
+        <label for="IQ4">I</label><br>
+
+        <input type="radio" id="SheQ4" name="Q4" value="SheQ4">
+        <label for="SheQ4">She<img id="imgQ4"></label><br>
+
+        <input type="radio" id="HeQ4" name="Q4" value="HeQ4">
+        <label for="HeQ4">He</label><br>
+
+        <input type="radio" id="OneselfQ4" name="Q4" value="OneselfQ4">
+        <label for="OneselfQ4">Oneself</label><br>
+
+    <li>Ĝi</li>
+        <input type="radio" id="YouQ5" name="Q5" value="YouQ5">
+        <label for="YouQ5">You</label><br>
+
+        <input type="radio" id="ItQ5" name="Q5" value="ItQ5">
+        <label for="ItQ5">It<img id="imgQ5"></label><br>
+
+        <input type="radio" id="IQ5" name="Q5" value="IQ5">
+        <label for="IQ5">I</label><br>
+
+        <input type="radio" id="EveryoneQ5" name="Q5" value="IQ5">
+        <label for="EveryoneQ5">I</label><br>
+
+    <li>Si</li>
+        <input type="radio" id="IQ6" name="Q6" value="IQ6">
+        <label for="IQ6">I</label><br>
+
+        <input type="radio" id="SheQ6" name="Q6" value="SheQ6">
+        <label for="SheQ6">She</label><br>
+        
+        <input type="radio" id="OneselfQ6" name="Q6" value="OneselfQ6">
+        <label for="OneselfQ6">Oneself<img id="imgQ6"></label><br>
+        
+        <input type="radio" id="EveryoneQ6" name="Q6" value="IQ6">
+        <label for="EveryoneQ6">I</label><br>
+
+    <li>Ĉiu</li>
+        <input type="radio" id="OneselfQ7" name="Q7" value="OneselfQ7">
+        <label for="OneselfQ7">Oneself</label><br>
+        
+        <input type="radio" id="EveryoneQ7" name="Q7" value="EveryoneQ7">
+        <label for="EveryoneQ7">Everyone<img id="imgQ7"></label><br>
+        
+        <input type="radio" id="I" name="Q7" value="I">
+        <label for="I">I</label><br>
+        
+        <input type="radio" id="OneQ7" name="Q7" value="OneQ7">
+        <label for="OneQ7">One</label><br>
+
+    <li>Oni</li>
+        <input type="radio" id="OneselfQ8" name="Q8" value="OneselfQ8">
+        <label for="OneselfQ8">Oneself</label><br>
+        
+        <input type="radio" id="EveryoneQ8" name="Q8" value="EveryoneQ8">
+        <label for="EveryoneQ8">Everyone</label><br>
+        
+        <input type="radio" id="IQ8" name="Q8" value="IQ8">
+        <label for="IQ8">I</label><br>
+        
+        <input type="radio" id="OneQ8" name="Q8" value="OneQ8">
+        <label for="OneQ8">One<img id="imgQ8"></label><br>
+</ol>
+<button type="submit" id="submitBtn" onclick="showImg()">Submit</button>
+</div>
+</body>
+</html>
+

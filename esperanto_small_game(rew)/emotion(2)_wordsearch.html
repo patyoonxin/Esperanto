@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion2 Wordsearch</title>
+    <script>
+        window.onload = function() {
+            const cells = document.querySelectorAll("td");
+            for (let node of cells) {
+                // select and hightlight
+                node.onclick = function() {
+                    if (!node.classList.contains("selected")){
+                        node.classList.add("selected");
+                    } else {
+                        node.classList.remove("selected");
+                    }
+                    checkSelection();
+                }
+                if (node.textContent != "") continue; 
+                let charcode = Math.round(65 + Math.random() * 25)
+                node.textContent = String.fromCharCode(charcode);
+            }
+        }
+
+        function checkSelection() {
+            let selectedAngoro = document.querySelectorAll(".ANGORO.selected").length;
+            let selectedFeliĉo = document.querySelectorAll(".FELIĈO.selected").length;
+            let selectedTristeco = document.querySelectorAll(".TRISTECO.selected").length;
+            let selectedKolero = document.querySelectorAll(".KOLERO.selected").length;
+            let selectedIntereso = document.querySelectorAll(".INTERESO.selected").length;
+            let selectedMiro = document.querySelectorAll(".MIRO.selected").length;
+            let selectedAmo = document.querySelectorAll(".AMO.selected").length;
+            let selectedTimo = document.querySelectorAll(".TIMO.selected").length;
+
+            document.getElementById("checkbox1").checked = selectedFeliĉo === 6;
+            document.getElementById("checkbox2").checked = selectedTristeco === 8;
+            document.getElementById("checkbox3").checked = selectedAngoro === 6;
+            document.getElementById("checkbox4").checked = selectedKolero === 6;
+            document.getElementById("checkbox5").checked = selectedMiro === 4;
+            document.getElementById("checkbox6").checked = selectedIntereso === 8;
+            document.getElementById("checkbox7").checked = selectedTimo === 4;
+            document.getElementById("checkbox8").checked = selectedAmo === 3;
+        }
+
+        const checkboxes = document.getElementsByClassName("checkbox");
+        for(let i=0; i < document.querySelectorAll(".checkbox").length; ++i){
+            checkboxes[i].disabled = true;
+        }
+
+    </script>
+        <style>
+            table{
+                border-collapse:collapse;
+                justify-content: center; 
+                align-items: center; 
+                text-align: center; 
+                margin: 0 auto; 
+            }
+
+            td{
+                cursor : pointer; 
+                border:1px solid black;
+                width:30px;
+                height:30px;
+                text-align:center;
+            }
+
+            td.selected {
+                background:yellow;
+            }
+
+            input[type="checkbox"]{
+                appearance: none;
+                width: 10px;
+            }
+
+            input[type="checkbox"]:checked::before {
+                content: '\2713';
+                color: green; 
+                /*transform: translate(-50%, -50%);*/
+            }
+
+            body{
+            background-image: url("bg_with_tree.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #8fa540;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            margin: 0;
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Align checkbox and label to the left */
+}
+
+        .checkbox input[type="checkbox"] {
+            margin-right: 10px; /* Add some spacing between the checkbox and label */
+        }
+
+        h3{
+            margin-left: 40px;
+            text-align: left;
+        }
+        @media (max-width: 1500px) {
+            div {
+                min-width:860px;
+                background-color: beige;
+                justify-content: center; 
+                align-items: center; 
+                padding: 20px 10px;
+                margin:0 auto;
+                text-align: center; 
+            }
+            input{
+                font-size:20px;
+                width:166px;
+            }
+            #submitBtn{
+                height: 25px;
+                width: 100px;
+                background-color:white;
+                font-size: black;
+                font-size: 16px;
+                margin:15px auto;
+                position: center; 
+            }
+        }
+
+        @media (min-width: 1500px) {
+            div {
+                min-width:860px;
+                background-color: beige;
+                justify-content: center; 
+                align-items: center; 
+                padding: 20px 10px;
+                text-align: center; 
+
+            }
+            input{
+                font-size:20px;
+                width:166px;
+            }
+            #submitBtn{
+                height: 27px;
+                width: 100px;
+                background-color:white;
+                font-size: black;
+                font-size: 18px;
+                margin:15px auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <table>
+        <tr id="row1">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row2">
+            <td></td>
+            <td class="TIMO">O</td>
+            <td class="TIMO">M</td>
+            <td class="TIMO">I</td>
+            <td class="TIMO">T</td>
+            <td></td>
+            <td></td>
+            <td class="ANGORO">O</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row3">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ANGORO">R</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row4">
+            <td class="FELIĈO">F</td>
+            <td class="FELIĈO">E</td>
+            <td class="FELIĈO">L</td>
+            <td class="FELIĈO">I</td>
+            <td class="FELIĈO">Ĉ</td>
+            <td class="FELIĈO">O</td>
+            <td></td>
+            <td class="ANGORO">O</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row5">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ANGORO">G</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row6">
+            <td></td>
+            <td></td>
+            <td class="TRISTECO">T</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ANGORO">N</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row7">
+            <td class="KOLERO">K</td>
+            <td></td>
+            <td class="TRISTECO">R</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ANGORO">A</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row8">
+            <td class="KOLERO">O</td>
+            <td></td>
+            <td class="TRISTECO">I</td>
+            <td></td>
+            <td></td>
+            <td class="INTERESO">O</td>
+            <td></td>
+            <td></td>
+            <td class="MIRO">M</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row9">
+            <td class="KOLERO">L</td>
+            <td></td>
+            <td class="TRISTECO">S</td>
+            <td></td>
+            <td></td>
+            <td class="INTERESO">S</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="MIRO">I</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row10">
+            <td class="KOLERO">E</td>
+            <td></td>
+            <td class="TRISTECO">T</td>
+            <td></td>
+            <td></td>
+            <td class="INTERESO">E</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="MIRO">R</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row11">
+            <td class="KOLERO">R</td>
+            <td></td>
+            <td class="TRISTECO">E</td>
+            <td></td>
+            <td></td>
+            <td class="INTERESO">R</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="MIRO">O</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row12">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="INTERESO">E</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row13">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="INTERESO">T</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row14">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="INTERESO">N</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row15">
+            <td class="AMO">A</td>
+            <td class="AMO">M</td>
+            <td class="AMO">O</td>
+            <td></td>
+            <td></td>
+            <td class="INTERESO">I</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h3>Hint</h3>
+    <label class="checkbox">
+        <input type="checkbox" class="checkbox" id="checkbox1" disabled>Think about what makes you smile and brings you joy.
+    </label><br>
+
+    <label class="checkbox">
+        <input type="checkbox" class="checkbox" id="checkbox2" disabled>When you feel low, this emotion might be present.
+    </label><br>
+
+    <label class="checkbox">
+        <input type="checkbox" class="checkbox" id="checkbox3" disabled>Often associated with fear or extreme distress.
+    </label><br>
+
+    <label class="checkbox">
+        <input type="checkbox" class="checkbox" id="checkbox4" disabled>What you might feel when someone greatly upsets you.        
+    </label><br>
+
+    <label class="checkbox">
+        <input type="checkbox" class="checkbox" id="checkbox5" disabled>A feeling of wonder or astonishment.
+    </label><br>
+
+    <label class="checkbox">
+        <input type="checkbox" class="checkbox" id="checkbox6" disabled>You feel this when something captivates your attention or curiosity.
+
+    </label><br>
+
+    <label class="checkbox">
+        <input type="checkbox" class="checkbox" id="checkbox7">It's that uneasy feeling when you're afraid of something.        
+    </label><br>
+
+    <label class="checkbox">
+        <input type="checkbox" class="checkbox" id="checkbox8">The strongest of emotions, it often brings people together in profound ways.
+    </label>
+</div>
+</body>
+</html>
