@@ -81,9 +81,72 @@
         input{
             width:150px;
         }
+
+        body{
+            background-image: url("bg_with_tree2.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #8fa540;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            margin: 0;
+        }
+
+        @media (max-width: 1500px) {
+            div {
+                min-width:860px;
+                background-color: beige;
+                justify-content: center; 
+                align-items: center; 
+                padding: 20px 10px;
+                margin:0 auto;
+                text-align: center; 
+            }
+            input{
+                font-size:20px;
+                width:166px;
+            }
+            #submitBtn{
+                height: 25px;
+                width: 100px;
+                background-color:white;
+                font-size: black;
+                font-size: 16px;
+                margin:15px auto;
+                position: center; 
+            }
+        }
+
+        @media (min-width: 1500px) {
+            div {
+                min-width:860px;
+                background-color: beige;
+                justify-content: center; 
+                align-items: center; 
+                padding: 20px 10px;
+                text-align: center; 
+
+            }
+            input{
+                font-size:20px;
+                width:166px;
+            }
+            #submitBtn{
+                height: 27px;
+                width: 100px;
+                background-color:white;
+                font-size: black;
+                font-size: 18px;
+                margin:15px auto;
+            }
+        }
+
     </style>
 </head>
 <body>
+<div>
     <table>
         <tr>
             <td class="NoDiv"><img src="one.jpg" alt="one" class="Img"></td>
@@ -111,5 +174,6 @@
         </tr>
     </table>
     <button type="submit" id="submitBtn">Submit</button>
-    </body>
+</div>
+</body>
 </html>

@@ -123,9 +123,95 @@
         input.false{
             color:red;
         }
+
+        body{
+            background-image: url("bg_with_tree.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #8fa540;
+        }
+
+        @media (max-width: 1500px) {
+            div {
+                margin: 120px 150px auto 150px;
+                background-color: beige;
+                font-size:20px;
+                position:center;
+                padding: 10px;
+            }
+            li{
+                margin-top: 17px;
+            }
+            #submitBtn{
+                height: 25px;
+                width: 80px;
+                background-color:white;
+                font-size: black;
+                font-size: 16px;
+                margin:5px 20px;
+            }
+
+            table{
+                position: center;
+                margin: 0 auto;
+            }
+
+            h3{
+                margin:15px 5px 5px 10px;
+                font-size:22px;
+            }
+            ul{
+                margin:0px 10px 10px 10px;
+            }
+            li{
+                margin:0px 0px 0px 0px;
+                font-size:19px;
+            }
+        }
+
+        @media (min-width: 1500px) {
+            div {
+                margin: 120px 450px auto 450px ;
+
+                background-color: beige;
+                font-size:22px;
+                position:center;
+                padding: 10px 100px;
+                align-items: center; 
+            }
+            li{
+                margin-top: 25px;
+            }
+            #submitBtn{
+                height: 27px;
+                width: 82px;
+                background-color:white;
+                font-size: black;
+                font-size: 18px;
+                margin:5px 20px;
+            }
+            table{
+                position: center;
+                margin: 0 auto;
+            }
+
+            h3{
+                margin:15px 5px 5px 10px;
+                font-size:22px;
+            }
+            ul{
+                margin:0px 10px 10px 10px;
+            }
+            li{
+                margin:0px 0px 0px 0px;
+                font-size:19px;
+            }
+        }
+
     </style>
 </head>
 <body>
+<div>
     <table>
         <tr class="row" id="row1">
             <td></td>
@@ -141,8 +227,7 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            
         </tr>
 
         <tr class="row" id="row2">
@@ -159,8 +244,7 @@
             <td class="withB">R</td>
             <td class="withB"><input type="text" id="S2"></td>
             <td class="withB"><input type="text"  id="O2"></td>
-            <td></td>
-            <td></td>
+            
         </tr>
 
         <tr class="row" id="row3">
@@ -177,8 +261,7 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            
         </tr>
 
         <tr class="row" id="row4">
@@ -195,8 +278,7 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            
         </tr>
 
         <tr class="row" id="row5">
@@ -213,8 +295,7 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            
         </tr>
 
         <tr class="row" id="row6">
@@ -231,8 +312,7 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            
         </tr>
 
         <tr class="row" id="row7">
@@ -249,8 +329,7 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            
         </tr>
 
         <tr class="row" id="row8">
@@ -267,8 +346,7 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            
         </tr>
 
         <tr class="row" id="row9">
@@ -285,8 +363,7 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            
         </tr>
 
         <tr class="row" id="row10">
@@ -303,8 +380,7 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            
         </tr>
 
         
@@ -324,5 +400,6 @@
         </ul>
 
         <button type="submit" id="submitBtn">Submit</button>
-</body>
+    </div>
+    </body>
 </html>

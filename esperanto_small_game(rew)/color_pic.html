@@ -113,9 +113,72 @@
         input.false{
             color:red;
         }
+
+        body{
+            background-image: url("bg_with_tree.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #8fa540;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            margin: 0;
+        }
+
+        @media (max-width: 1500px) {
+            div {
+                min-width:860px;
+                background-color: beige;
+                justify-content: center; 
+                align-items: center; 
+                padding: 20px 10px;
+                margin:0 auto;
+                text-align: center; 
+            }
+            input{
+                font-size:20px;
+                width:166px;
+            }
+            #submitBtn{
+                height: 25px;
+                width: 100px;
+                background-color:white;
+                font-size: black;
+                font-size: 16px;
+                margin:15px auto;
+                position: center; 
+            }
+        }
+
+        @media (min-width: 1500px) {
+            div {
+                min-width:860px;
+                background-color: beige;
+                justify-content: center; 
+                align-items: center; 
+                padding: 20px 10px;
+                text-align: center; 
+
+            }
+            input{
+                font-size:20px;
+                width:166px;
+            }
+            #submitBtn{
+                height: 27px;
+                width: 100px;
+                background-color:white;
+                font-size: black;
+                font-size: 18px;
+                margin:15px auto;
+            }
+        }
+
     </style>
 </head>
 <body>
+<div>
 <table>
     <tr>
         <td class="colorDiv" id="blueIm"></td>
@@ -129,11 +192,13 @@
         <td class="inputDiv" id="yellowINbox"><input type="text" id="inputYellow" required></td>
         <td class="inputDiv" id="greenINbox"><input type="text" id="inputGreen" required></td>
     </tr>
+    <tr></tr>
+    <tr></tr>
     <tr>
         <td class="colorDiv" id="brownIm"></td>
         <td class="colorDiv" id="blackIm"></td>
         <td class="colorDiv" id="greyIm"></td>
-        <td class="colorDiv" id="purpleIm"></td>
+        <td class="colorDiv" id="purpleIm"></td> 
     </tr>
     <tr>
         <td class="inputDiv" id="brownINbox"><input type="text" id="inputBrown" required></td>
@@ -143,5 +208,6 @@
     </tr>
 </table>
 <button type="submit" id="submitBtn">Submit</button>
+</div>
 </body>
 </html>

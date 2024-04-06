@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion2 Wordsearch</title>
+    <script>
+        window.onload = function() {
+            const cells = document.querySelectorAll("td");
+            for (let node of cells) {
+                // select and hightlight
+                node.onclick = function() {
+                    if (!node.classList.contains("selected")){
+                        node.classList.add("selected");
+                    } else {
+                        node.classList.remove("selected");
+                    }
+                    checkSelection();
+                }
+                if (node.textContent != "") continue; 
+                let charcode = Math.round(65 + Math.random() * 25)
+                node.textContent = String.fromCharCode(charcode);
+            }
+        }
+
+        function checkSelection() {
+            let selectedTempo = document.querySelectorAll(".TEMPO.selected").length;
+            let selectedTago = document.querySelectorAll(".TAGO.selected").length;
+            let selectedNokto = document.querySelectorAll(".NOKTO.selected").length;
+            let selectedSemajno = document.querySelectorAll(".SEMAJNO.selected").length;
+            let selectedMonato = document.querySelectorAll(".MONATO.selected").length;
+            let selectedJaro= document.querySelectorAll(".JARO.selected").length;
+            let selectedHieraŭ= document.querySelectorAll(".HIERAŬ.selected").length;
+            let selectedMorgaŭ = document.querySelectorAll(".MORGAŬ.selected").length;
+
+            document.getElementById("checkbox1").checked = selectedTempo === 5;
+            document.getElementById("checkbox2").checked = selectedTago === 4;
+            document.getElementById("checkbox3").checked = selectedNokto === 5;
+            document.getElementById("checkbox4").checked = selectedSemajno === 7;
+            document.getElementById("checkbox5").checked = selectedMonato === 6;
+            document.getElementById("checkbox6").checked = selectedJaro === 4;
+            document.getElementById("checkbox7").checked = selectedHieraŭ === 6;
+            document.getElementById("checkbox8").checked = selectedMorgaŭ === 6;
+        }
+
+        const checkboxes = document.getElementsByClassName("checkbox");
+        for(let i=0; i < document.querySelectorAll(".checkbox").length; ++i){
+            checkboxes[i].disabled = true;
+        }
+
+    </script>
+        <style>
+            table{
+                border-collapse:collapse;
+                justify-content: center; 
+                align-items: center; 
+                text-align: center; 
+                margin: 0 auto; 
+            }
+
+            td{
+                cursor : pointer; 
+                border:1px solid black;
+                width:30px;
+                height:30px;
+                text-align:center;
+            }
+
+            td.selected {
+                background:yellow;
+            }
+
+            input[type="checkbox"]{
+                appearance: none;
+                width: 10px;
+            }
+
+            input[type="checkbox"]:checked::before {
+                content: '\2713';
+                color: green; 
+                /*transform: translate(-50%, -50%);*/
+            }
+
+            body{
+            background-image: url("bg_with_tree.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #8fa540;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            margin: 0;
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Align checkbox and label to the left */
+}
+
+        .checkbox input[type="checkbox"] {
+            margin-right: 10px; /* Add some spacing between the checkbox and label */
+        }
+
+        h3{
+            margin-left: 35px;
+            text-align: left;
+        }
+
+        label{
+            margin:0px;
+        }
+
+        
+        @media (max-width: 1500px) {
+            div {
+                min-width:860px;
+                background-color: beige;
+                justify-content: center; 
+                align-items: center; 
+                padding: 20px 10px;
+                margin:0 auto;
+                text-align: center; 
+            }
+            input{
+                font-size:20px;
+                width:166px;
+            }
+            #submitBtn{
+                height: 25px;
+                width: 100px;
+                background-color:white;
+                font-size: black;
+                font-size: 16px;
+                margin:15px auto;
+                position: center; 
+            }
+        }
+
+        @media (min-width: 1500px) {
+            div {
+                min-width:860px;
+                background-color: beige;
+                justify-content: center; 
+                align-items: center; 
+                padding: 20px 10px;
+                text-align: center; 
+
+            }
+            input{
+                font-size:20px;
+                width:166px;
+            }
+            #submitBtn{
+                height: 27px;
+                width: 100px;
+                background-color:white;
+                font-size: black;
+                font-size: 18px;
+                margin:15px auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <table>
+        <tr id="row1">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row2">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="HIERAŬ">H</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row3">
+            <td></td>
+            <td class="TEMPO">T</td>
+            <td class="TEMPO">E</td>
+            <td class="TEMPO">M</td>
+            <td class="TEMPO">P</td>
+            <td class="TEMPO">O</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="NOKTO">O</td>
+            <td></td>
+            <td class="HIERAŬ">I</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row4">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="NOKTO">T</td>
+            <td></td>
+            <td></td>
+            <td class="HIERAŬ">E</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row5">
+            <td></td>
+            <td class="JARO">O</td>
+            <td class="JARO">R</td>
+            <td class="JARO">A</td>
+            <td class="JARO">J</td>
+            <td></td>
+            <td></td>
+            <td class="NOKTO">K</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="HIERAŬ">R</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row6">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="NOKTO">O</td>
+            <td></td>
+            <td class="MORGAŬ">Ŭ</td>
+            <td></td>
+            <td></td>
+            <td class="HIERAŬ">A</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row7">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="NOKTO">N</td>
+            <td></td>
+            <td></td>
+            <td class="MORGAŬ">A</td>
+            <td></td>
+            <td></td>
+            <td class="HIERAŬ">Ŭ</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row8">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="MORGAŬ">G</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row9">
+            <td class="SEMAJNO">S</td>
+            <td class="SEMAJNO">E</td>
+            <td class="SEMAJNO">M</td>
+            <td class="SEMAJNO">A</td>
+            <td class="SEMAJNO">J</td>
+            <td class="SEMAJNO">N</td>
+            <td class="SEMAJNO">O</td>
+            <td></td>
+            <td class="MORGAŬ">R</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row10">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="MORGAŬ">O</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row11">
+            <td></td>
+            <td></td>
+            <td class="TAGO">O</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="MORGAŬ">M</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row12">
+            <td></td>
+            <td></td>
+            <td class="TAGO">G</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row13">
+            <td></td>
+            <td></td>
+            <td class="TAGO">A</td>
+            <td></td>
+            <td></td>
+            <td class="MONATO">O</td>
+            <td class="MONATO">T</td>
+            <td class="MONATO">A</td>
+            <td class="MONATO">N</td>
+            <td class="MONATO">O</td>
+            <td class="MONATO">M</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row14">
+            <td></td>
+            <td></td>
+            <td class="TAGO">T</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr id="row15">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h3>Hint</h3>
+    <label class="checkbox">
+        <input type="checkbox" class="checkbox" id="checkbox1" disabled>It's what you measure with clocks and watches.
+    </label><br>
+
+    <label class="checkbox">
+        <input type="checkbox" class="checkbox" id="checkbox2" disabled>When the sun is up and you're awake, it's this.
+    </label><br>
+
+    <label class="checkbox">
+        <input type="checkbox" class="checkbox" id="checkbox3" disabled>The time when you sleep and the stars come out.
+    </label><br>
+
+    <label class="checkbox">
+        <input type="checkbox" class="checkbox" id="checkbox4" disabled>It's made up of seven days.        
+    </label><br>
+
+    <label class="checkbox">
+        <input type="checkbox" class="checkbox" id="checkbox5" disabled>Approximately 30 days make up this unit of time.
+    </label><br>
+
+    <label class="checkbox">
+        <input type="checkbox" class="checkbox" id="checkbox6" disabled>It's a period of 12 months.
+
+    </label><br>
+
+    <label class="checkbox">
+        <input type="checkbox" class="checkbox" id="checkbox7" disabled>It refers to the day before today.       
+    </label><br>
+
+    <label class="checkbox">
+        <input type="checkbox" class="checkbox" id="checkbox8" disabled>It's the day after today.
+    </label>
+</div>
+</body>
+</html>

@@ -3,62 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Wordsearch</title>
+    <title>Emotion Wordsearch</title>
     <script>
         window.onload = function() {
             document.getElementById('submitBtn').onclick = function() {
                 // Check input1
                 let inp1 = document.getElementById('input1').value.toLowerCase();
-                if (inp1 === "manĝaĵo") {
+                if (inp1 === "vetero") {
                     document.getElementById('input1').className = "true";
                 } else {
                     document.getElementById('input1').className = "false";
                 }
 
                 let inp2 = document.getElementById('input2').value.toLowerCase();
-                if (inp2 === "pomo") {
+                if (inp2 === "varmo") {
                     document.getElementById('input2').className = "true";
                 } else {
                     document.getElementById('input2').className = "false";
                 }
 
                 let inp3 = document.getElementById('input3').value.toLowerCase();
-                if (inp3 === "pano") {
+                if (inp3 === "malvarmo") {
                     document.getElementById('input3').className = "true";
                 } else {
                     document.getElementById('input3').className = "false";
                 }
 
                 let inp4 = document.getElementById('input4').value.toLowerCase();
-                if (inp4 === "fromaĝo") {
+                if (inp4 === "pluvo") {
                     document.getElementById('input4').className = "true";
                 } else {
                     document.getElementById('input4').className = "false";
                 }
 
                 let inp5 = document.getElementById('input5').value.toLowerCase();
-                if (inp5 === "porko") {
+                if (inp5 === "neĝo") {
                     document.getElementById('input5').className = "true";
                 } else {
                     document.getElementById('input5').className = "false";
                 }
 
                 let inp6 = document.getElementById('input6').value.toLowerCase();
-                if (inp6 === "bovo") {
+                if (inp6 === "vento") {
                     document.getElementById('input6').className = "true";
                 } else {
                     document.getElementById('input6').className = "false";
                 }
 
                 let inp7 = document.getElementById('input7').value.toLowerCase();
-                if (inp7 === "legomo") {
+                if (inp7 === "nubo") {
                     document.getElementById('input7').className = "true";
                 } else {
                     document.getElementById('input7').className = "false";
                 }
 
                 let inp8 = document.getElementById('input8').value.toLowerCase();
-                if (inp8 === "spico") {
+                if (inp8 === "suno") {
                     document.getElementById('input8').className = "true";
                 } else {
                     document.getElementById('input8').className = "false";
@@ -75,21 +75,72 @@
             color:red;
         }
 
+        body{
+            background-image: url("bg_with_tree.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #8fa540;
+        }
+
+        @media (max-width: 1500px) {
+            div {
+                margin: 100px 150px;
+                background-color: beige;
+                font-size:20px;
+                position:center;
+                padding: 10px;
+            }
+            li{
+                margin-top: 17px;
+            }
+            #submitBtn{
+                height: 25px;
+                width: 80px;
+                background-color:white;
+                font-size: black;
+                font-size: 16px;
+                margin:5px 20px;
+            }
+        }
+
+        @media (min-width: 1500px) {
+            div {
+                margin: 50px 450px ;
+
+                background-color: beige;
+                font-size:22px;
+                position:center;
+                padding: 10px 100px;
+            }
+            li{
+                margin-top: 25px;
+            }
+            #submitBtn{
+                height: 27px;
+                width: 82px;
+                background-color:white;
+                font-size: black;
+                font-size: 18px;
+                margin:5px 20px;
+            }
+        }
 
     </style>
 </head>
 <body>
+<div>
 <h2>Vocabulary</h2>
 <ol>
-    <li>mĝaaĵno - <input type="text" id="input1" required></li>
-    <li>poom    - <input type="text" id="input2" required></li>
-    <li>pona    - <input type="text" id="input3" required></li>
-    <li>frmaooĝ - <input type="text" id="input4" required></li>
-    <li>kroop   - <input type="text" id="input5" required></li>
-    <li>voob    - <input type="text" id="input6" required></li>
-    <li>gloemo  - <input type="text" id="input7" required></li>
-    <li>pocis   - <input type="text" id="input8" required></li>
+    <li>terove    - <input type="text" id="input1" required></li>
+    <li>vomar     - <input type="text" id="input2" required></li>
+    <li>lavomamar - <input type="text" id="input3" required></li>
+    <li>vulpo     - <input type="text" id="input4" required></li>
+    <li>ĝeno      - <input type="text" id="input5" required></li>
+    <li>tevon     - <input type="text" id="input6" required></li>
+    <li>buno      - <input type="text" id="input7" required></li>
+    <li>sonu      - <input type="text" id="input8" required></li>
 </ol>
 <button type="submit" id="submitBtn">Submit</button>
+</div>
 </body>
 </html>
