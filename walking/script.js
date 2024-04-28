@@ -29,11 +29,10 @@ function moveFootprint() {
 }
 
 function openMiniGame(miniGameUrl, modalSize) {
-  // Open the mini-game in a new window or modal
+
   const modal = document.createElement('div');
   modal.classList.add('modal');
 
-  // Create a wrapper inside the modal for content
   const modalContent = document.createElement('div');
   modalContent.classList.add('modal-content');
 
