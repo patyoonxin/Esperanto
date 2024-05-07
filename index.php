@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 	<title>Home</title>
 	<style>
 	*
@@ -67,29 +69,6 @@
 		}
 	}
 
-	.nav{
-		width:100%;
-		background-color:black ;
-		overflow: hidden;
-
-	}
-	.nav a{
-		padding: 14px 16px;
-		float: left;
-		text-decoration: none;
-		color: #fff;
-		font-family: "Lucida Console", "Courier New", monospace;
-		font-size: 20px;
-		
-	}
-	.nav a:hover{
-		background-color:#fff;
-		color: black;
-	}
-	.nav a.active{
-		background-color:#088;
-		color: white;
-	}
 	div.relative {
 		position: relative;
 		text-align:center;
@@ -144,18 +123,14 @@
 		
 	}
 
-
-
 	</style>
 </head>
 <body>
+	<?php include 'db.php';?>
+	<?php require 'nav.php' ?>
+  
 	<div class="container">
-		<div class="nav">
-			<a href="#" class="active">Esperanto</a>
-			<a style="float:right" href="#">Profile</a>
-			<a style="float:right" href="#">Leaderboard</a>
-			
-		</div> 
+		
 		<div class="bubbles">
 			<span style="--i:11;z-index: -1;"></span>
 			<span style="--i:12;z-index: -1;"></span>
@@ -206,5 +181,7 @@
 			<br><a href="walking/walkingindex.html" class="buttonStart">Start Game</a>
 		</div>
 	</div>
+
+	 
 </body>
 </html>

@@ -64,7 +64,7 @@ function continueFootprintAnimation() {
     moveFootprint();
   } else {
     if(window.confirm("Congratulations, You Have Completed the games!") == true){
-      window.location.replace("../index.html");
+      window.location.replace("../index.php");
     };
   }
 }
